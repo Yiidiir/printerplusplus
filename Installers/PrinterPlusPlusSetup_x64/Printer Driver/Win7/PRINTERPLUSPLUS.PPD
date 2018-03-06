@@ -1,0 +1,93 @@
+*PPD-Adobe: "4.3"
+*FileVersion: "1.1"
+*FormatVersion: "4.3" 
+*LanguageEncoding: ISOLatin1
+*LanguageVersion: English
+*Manufacturer: "OPX Soft Inc."
+*ModelName: "PrinterPlusPlus"
+*ShortNickName: "PrinterPlusPlus"
+*NickName: "PrinterPlusPlus"
+*PCFileName: "PRINTERPLUSPLUS.PPD"
+*Product: "(PrinterPlusPlus)"
+*Product: "(AFPL PrinterPlusPlus)"
+*Product: "(GNU PrinterPlusPlus)"
+*Product: "(GPL PrinterPlusPlus)"
+*PSVersion: "(3010) 815"
+*Copyright: "2012 OPX Soft Inc."
+
+*LanguageLevel: "3"
+*ColorDevice: True
+*DefaultColorSpace: RGB
+*FileSystem: True
+*Extensions: CMYK FileSystem Composite
+*TTRasterizer: Type42
+*FreeVM: "10000000"
+*PrintPSErrors: True
+*ContoneOnly: True
+
+*OpenUI *Resolution: PickOne
+*DefaultResolution: 600dpi
+*OrderDependency: 10 AnySetup *Resolution
+*Resolution 600dpi: "<< /HWResolution [600 600] >> setpagedevice"
+*CloseUI: *Resolution
+
+*HWMargins: 0 0 0 0
+*ParamCustomPageSize Width: 1 points 1 5670
+*ParamCustomPageSize Height: 2 points 1 5670
+*ParamCustomPageSize WidthOffset/Width Margin: 3 points 0 5670
+*ParamCustomPageSize HeightOffset/Height Margin: 4 points 0 5670
+*ParamCustomPageSize Orientation: 5 int 0 3
+*NonUIOrderDependency: 20 AnySetup *CustomPageSize
+*CustomPageSize True: "
+  5 -2 roll exch 5 2 roll
+  3 -2 roll exch 3 2 roll
+  [ {}
+    {90 rotate 0 currentpagedevice /PageSize get 0 get neg translate}
+    {180 rotate currentpagedevice /PageSize get 
+     dup 0 get neg exch 1 get neg translate}
+    {270 rotate currentpagedevice /PageSize get 1 get neg 0 translate}
+  ] exch get
+  4 dict dup begin 6 1 roll
+  /Install exch def
+  2 array astore /PageOffset exch def
+  2 array astore /PageSize exch def
+  /ImagingBBox null def
+  end setpagedevice"
+*End
+*MaxMediaWidth: "5670"
+*MaxMediaHeight: "5670"
+
+*LandscapeOrientation: Any
+
+*OpenUI *PageSize: PickOne
+*OrderDependency: 20 AnySetup *PageSize
+*PageSize PrinterPlusPlus: "<< /PageSize [612 5670] /ImagingBBox null >> setpagedevice"
+*PageSize Letter: "<< /PageSize [612 792] /ImagingBBox null >> setpagedevice"
+*PageSize Legal: "<< /PageSize [612 1008] /ImagingBBox null >> setpagedevice"
+*PageSize A4: "<< /PageSize [595 842] /ImagingBBox null >> setpagedevice"
+*DefaultPageSize: PrinterPlusPlus
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion: PickOne
+*OrderDependency: 20 AnySetup *PageRegion
+*PageRegion PrinterPlusPlus: "<< /PageSize [612 5670] /ImagingBBox null >> setpagedevice"
+*PageRegion Letter: "<< /PageSize [612 792] /ImagingBBox null >> setpagedevice"
+*PageRegion Legal: "<< /PageSize [612 1008] /ImagingBBox null >> setpagedevice"
+*PageRegion A4: "<< /PageSize [595 842] /ImagingBBox null >> setpagedevice"
+*DefaultPageRegion: PrinterPlusPlus
+*CloseUI: *PageRegion
+
+*ImageableArea PrinterPlusPlus: "0 0 612 5670"
+*ImageableArea Letter: "0 0 612 792"
+*ImageableArea Legal: "0 0 612 1008"
+*ImageableArea A4: "0 0 595 842"
+*DefaultImageableArea: PrinterPlusPlus
+
+*PaperDimension PrinterPlusPlus: "612 5670"
+*PaperDimension Letter: "612 792"
+*PaperDimension Legal: "612 1008"
+*PaperDimension A4: "595 842"
+*DefaultPaperDimension: PrinterPlusPlus
+
+*DefaultFont: Courier
+*Font Courier: Standard "(1.05)" Standard ROM
